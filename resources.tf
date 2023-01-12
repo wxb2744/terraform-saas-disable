@@ -2,7 +2,7 @@
 
 resource "netapp-cloudmanager_cvo_azure" "cvo-azure" {
   provider = netapp-cloudmanager
-  name = "6140a726-2a7c-40dd-ac42-34f9d8cc5d97"
+  name = "cvo6140a7262a7c40ddac4234f9d8cc5d97"
   location = "northeurope"
   availability_zone = 1
   subscription_id = var.subscription_id
