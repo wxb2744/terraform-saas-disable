@@ -1,8 +1,11 @@
 # Specify CVO resources
+resource "random_id" "cvo_name" {
+  byte_length = 8
+}
 
 resource "netapp-cloudmanager_cvo_azure" "cvo-azure" {
   provider = netapp-cloudmanager
-  name = "cvo${random_id.id.hex}"
+  name = "cvo${random_id.cvo_name.hex}"
   location = "northeurope"
   availability_zone = 1
   subscription_id = var.subscription_id
